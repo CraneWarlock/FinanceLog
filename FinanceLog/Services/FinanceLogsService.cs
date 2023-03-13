@@ -53,7 +53,7 @@ namespace FinanceLog.Services
         public List<FinanceLogsDto> GetAll(int userId)
         {
             var user = GetUserById(userId);
-            var financeLogsDtos = _mapper.Map<List<FinanceLogsDto>>(user.Id);
+            var financeLogsDtos = _mapper.Map<List<FinanceLogsDto>>(user.FinanceLogs);
             return financeLogsDtos;
         }
 
